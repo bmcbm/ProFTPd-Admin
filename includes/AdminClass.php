@@ -61,7 +61,7 @@ class AdminClass {
      * initialize the database connection via ezSQL_mysql
      * @param Array $cfg configuration array retrieved from config.php to store in the object
      */
-    function AdminClass($cfg) {
+    function __construct($cfg) {
         $this->config = $cfg;
         // if db_type is not set, default to mysqli
         if (!isset($cfg['db_type']) || $cfg['db_type'] == "mysqli") {
