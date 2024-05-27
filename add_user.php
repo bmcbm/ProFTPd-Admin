@@ -148,7 +148,7 @@ if (isset($errormsg)) {
     $shell  = $cfg['default_shell'];
   } else {
     $ugid    = $_REQUEST[$field_ugid];
-    $ad_gid = $_REQUEST[$field_ad_gid];
+    $ad_gid = isset($_REQUEST[$field_ad_gid])?$_REQUEST[$field_ad_gid]:array();
     $shell  = $_REQUEST[$field_shell];
   }
   $passwd   = $ac->generate_random_string((int) $cfg['min_passwd_length']);
