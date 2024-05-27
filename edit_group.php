@@ -111,7 +111,7 @@ include ("includes/header.php");
               <th data-defaultsort="disabled"></th>
             </thead>
             <tbody>
-              <?php reset($users_main); while (list($u_id, $u_userid) = each($users_main)) {
+              <?php reset($users_main); foreach ($users_main as $u_id => $u_userid) {
                 $user = $ac->get_user_by_id($u_id); ?>
                 <tr>
                   <td class="pull-middle"><?php echo $user[$field_uid]; ?></td>
@@ -141,7 +141,7 @@ include ("includes/header.php");
               <th data-defaultsort="disabled"></th>
             </thead>
             <tbody>
-              <?php reset($users_add); while (list($u_id, $u_userid) = each($users_add)) {
+              <?php reset($users_add); foreach ($users_add as $u_id => $u_userid) {
                 $user = $ac->get_user_by_id($u_id); ?>
                 <tr>
                   <td class="pull-middle"><?php echo $user[$field_uid]; ?></td>

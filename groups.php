@@ -65,7 +65,7 @@ include ("includes/header.php");
                 <th data-defaultsort="disabled"></th>
               </thead>
               <tbody>
-                <?php while (list($g_gid, $g_group) = each($groups)) {
+                <?php foreach ($groups as $g_gid => $g_group) {
                   $n_main = $ac->get_user_count_by_gid($g_gid); 
                   $n_add = $ac->get_user_add_count_by_gid($g_gid); ?>
                   <tr>
