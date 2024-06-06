@@ -143,7 +143,7 @@ if (empty($errormsg) && !empty($_REQUEST["action"]) && $_REQUEST["action"] == "u
       $user = $ac->get_user_by_id($id);
     }
   } else {
-    $errormsg = implode($errors, "<br />\n");
+    $errormsg = implode("<br />\n", $errors);
   }
   if (empty($errormsg)) {
     /* add all groups */

@@ -79,7 +79,7 @@ if (empty($errormsg) && !empty($_REQUEST["action"]) && $_REQUEST["action"] == "u
       $errormsg = 'Group update failed; check log files.';
     }
   } else {
-    $errormsg = implode($errors, "<br />\n");
+    $errormsg = implode("<br />\n", $errors);
   }
 }
 

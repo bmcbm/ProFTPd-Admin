@@ -61,7 +61,7 @@ if (!empty($_REQUEST["action"]) && $_REQUEST["action"] == "create") {
         $errormsg = 'Group "'.$_REQUEST[$cfg['field_groupname']].'" creation failed; check log files.';
     }
   }  else {
-    $errormsg = implode($errors, "<br />\n");
+    $errormsg = implode("<br />\n", $errors);
   }
 }
 

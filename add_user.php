@@ -114,7 +114,7 @@ if (empty($errormsg) && !empty($_REQUEST["action"]) && $_REQUEST["action"] == "c
       $errormsg = 'User "'.$_REQUEST[$field_userid].'" creation failed; check log files.';
     }
   } else {
-    $errormsg = implode($errors, "<br />\n");
+    $errormsg = implode("<br />\n", $errors);
   }
 }
 
